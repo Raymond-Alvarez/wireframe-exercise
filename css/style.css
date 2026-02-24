@@ -15,11 +15,10 @@ nav, main {
     margin: 0 auto;
 }
 
-/* 2. Navigation */
+/* 2. Navigation - Updated for Stretch */
 nav {
     height: 90px;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
 }
 
@@ -28,52 +27,35 @@ nav img {
     height: 70px;
     background-color: #000;
     object-fit: contain;
-    margin-right: 40px; 
 }
 
 nav ul {
     display: flex;
-    gap: 90px; 
+    gap: 80px; 
     list-style: none;
+    /* This pushes Nav Items 1-4 to the right side of the 960px area */
+    margin-left: 30px; 
 }
 
 nav li {
     color: #999;
+    font-family: sans-serif;
 }
 
 /* 3. Placeholder Logic (Instant Load) */
-.hero-placeholder {
-    width: 960px;
-    height: 450px;
+.hero-placeholder, .sub-placeholder, .featured-placeholder {
     background-color: #000;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
+    font-weight: bold;
 }
 
-.sub-placeholder {
-    width: 300px;
-    height: 375px;
-    background-color: #000;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-}
-
-.featured-placeholder {
-    width: 480px;
-    height: 400px;
-    background-color: #000;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-}
+.hero-placeholder { width: 960px; height: 450px; }
+.sub-placeholder { width: 300px; height: 375px; }
+.featured-placeholder { width: 480px; height: 400px; }
 
 /* 4. Layout Sections */
 main {
