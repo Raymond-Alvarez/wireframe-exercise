@@ -1,0 +1,126 @@
+/* 1. Global Reset & Layout */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+header, footer {
+    width: 100%;
+    background-color: #333;
+}
+
+/* Centered container logic */
+nav, main {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* 2. Navigation Styling */
+nav {
+    height: 90px;
+    display: flex;
+    justify-content: flex-start; /* Keeps nav items grouped near the logo */
+    align-items: center;
+}
+
+nav img {
+    width: 200px;
+    height: 70px;
+    background-color: #000;
+    object-fit: contain;
+    margin-right: 40px; /* SHIFTING: Increase this to move links further right */
+}
+
+nav ul {
+    display: flex;
+    gap: 40px; 
+    list-style: none;
+}
+
+nav li {
+    color: #999;
+    font-size: 1rem;
+}
+
+/* 3. Main Content Area */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* 30px gutters per spec */
+    padding: 30px 0;
+}
+
+/* Hero Image */
+main > section:nth-of-type(1) img {
+    width: 960px;
+    height: 450px;
+    object-fit: cover;
+    display: block; 
+}
+
+/* Sub-Banners Row */
+main > section:nth-of-type(2) {
+    display: flex;
+    justify-content: space-between;
+}
+
+main > section:nth-of-type(2) img {
+    width: 300px;
+    height: 375px;
+}
+
+/* 4. Featured Section Row */
+main > section:nth-of-type(3) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+main > section:nth-of-type(3) img {
+    width: 480px; 
+    height: 400px;
+}
+
+main > section:nth-of-type(3) article {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Scrollable Container (Hidden scrollbar) */
+main > section:nth-of-type(3) div {
+    height: 250px;
+    overflow-y: scroll; 
+    margin-bottom: 20px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Edge */
+}
+
+main > section:nth-of-type(3) div::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+/* 5. Refined Call to Action Button */
+button {
+    background-color: #000; /* Dark background */
+    color: #fff;           /* White text for visibility */
+    border: 1px solid #333;
+    width: fit-content;    /* Shorter width look */
+    padding: 12px 35px;    /* Taller vertical space */
+    border-radius: 6px;    /* Rounded corners */
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 350ms ease; /* Requirement: 350ms transition */
+}
+
+button:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+/* 6. Footer */
+footer {
+    height: 150px;
+    margin-top: 30px;
+}
