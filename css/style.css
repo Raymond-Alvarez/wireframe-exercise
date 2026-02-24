@@ -10,17 +10,16 @@ header, footer {
     background-color: #333;
 }
 
-/* Centered container logic */
 nav, main {
     width: 960px;
     margin: 0 auto;
 }
 
-/* 2. Navigation Styling */
+/* 2. Navigation */
 nav {
     height: 90px;
     display: flex;
-    justify-content: flex-start; /* Keeps nav items grouped near the logo */
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -29,57 +28,70 @@ nav img {
     height: 70px;
     background-color: #000;
     object-fit: contain;
-    margin-right: 40px; /* SHIFTING: Increase this to move links further right */
+    margin-right: 40px; 
 }
 
 nav ul {
     display: flex;
-    gap: 40px; 
+    gap: 90px; 
     list-style: none;
 }
 
 nav li {
     color: #999;
-    font-size: 1rem;
 }
 
-/* 3. Main Content Area */
+/* 3. Placeholder Logic (Instant Load) */
+.hero-placeholder {
+    width: 960px;
+    height: 450px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.sub-placeholder {
+    width: 300px;
+    height: 375px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.featured-placeholder {
+    width: 480px;
+    height: 400px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+/* 4. Layout Sections */
 main {
     display: flex;
     flex-direction: column;
-    gap: 30px; /* 30px gutters per spec */
+    gap: 30px; 
     padding: 30px 0;
 }
 
-/* Hero Image */
-main > section:nth-of-type(1) img {
-    width: 960px;
-    height: 450px;
-    object-fit: cover;
-    display: block; 
-}
-
-/* Sub-Banners Row */
 main > section:nth-of-type(2) {
     display: flex;
     justify-content: space-between;
 }
 
-main > section:nth-of-type(2) img {
-    width: 300px;
-    height: 375px;
-}
-
-/* 4. Featured Section Row */
 main > section:nth-of-type(3) {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-}
-
-main > section:nth-of-type(3) img {
-    width: 480px; 
-    height: 400px;
 }
 
 main > section:nth-of-type(3) article {
@@ -88,30 +100,30 @@ main > section:nth-of-type(3) article {
     flex-direction: column;
 }
 
-/* Scrollable Container (Hidden scrollbar) */
-main > section:nth-of-type(3) div {
+/* Scrollable Container */
+main > section:nth-of-type(3) div.scroll-box {
     height: 250px;
     overflow-y: scroll; 
     margin-bottom: 20px;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
 }
 
-main > section:nth-of-type(3) div::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+main > section:nth-of-type(3) div.scroll-box::-webkit-scrollbar {
+    display: none;
 }
 
-/* 5. Refined Call to Action Button */
+/* 5. Button */
 button {
-    background-color: #000; /* Dark background */
-    color: #fff;           /* White text for visibility */
+    background-color: #000; 
+    color: #fff;
     border: 1px solid #333;
-    width: fit-content;    /* Shorter width look */
-    padding: 12px 35px;    /* Taller vertical space */
-    border-radius: 6px;    /* Rounded corners */
+    width: fit-content; 
+    padding: 12px 35px; 
+    border-radius: 6px; 
     cursor: pointer;
     font-weight: bold;
-    transition: all 350ms ease; /* Requirement: 350ms transition */
+    transition: all 350ms ease;
 }
 
 button:hover {
